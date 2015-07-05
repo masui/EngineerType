@@ -7,11 +7,89 @@
 
 <div style="width:500pt">
 
-<h1>世界の不便を退治しよう(3) - 家の中を快適にする技術</h2>
+<h1>世界の不便を退治しよう(3) - 乗り物を快適にする技術</h2>
+
+どんなに古い車でもスピードメータやガソリン残量計のようなセンサが登載されています。
+1980年ごろからブレーキその他の制御にワンチップマイコンが使われてきていますし、
+最近は沢山のCPUやセンサのモジュール(ECU: Electronic Control Unit)が
+<a hrer="https://vector.com/vj_ecu_jp.html#can">車載LAN</a>
+(CAN: Controller Area Network)で接続されるのが普通になりつつあります。
+2線ツイストペアを利用するCANは計算機で広く使われてきたEthernetとは似て非なるものですが、
+Ethernet準拠の
+<a href="http://www.veedims.com/">VEEDIMS</a>
+というネットワークが利用されている高級車もあるようです。
+
+<!--
+> http://internet.watch.impress.co.jp/www/article/2001/1205/ipv6smt.htm
+> > 　2001年の2月に横浜で実施されたITSのフィード実験についても触れ、ここで
+> > はバスやタクシーにさまざまなセンサーをつけてそれぞれの情報を収集したと
+> > いう。例えば、「それぞれの車につけたワイパーの動作状況と、その場所を収
+> > 集すれば雨の降っている場所が詳細に知ることができる」と新たな使い方を提
+> > 案し「この情報をタクシー会社に提供することにより、『雨による客待ちが多
+> > い地域』として活用することができる」とビジネスチャンスの1つであると期待
+> > した。
+> > 
+
+> http://monoist.atmarkit.co.jp/mn/articles/0805/09/news152_2.html
+> 車載ネットワークいろいろ
+
+> CSMA/CA（Carrier Sense Multiple Access with Collision Avoidance）
+
+
+http://www.popularmechanics.com/cars/how-to/a7386/how-it-works-the-computer-inside-your-car/
+Controller Area Network
+
+トヨタの, CANをスマホに送る装置
+http://www.nikkei.com/article/DGXNASFK03012_T00C12A2000000/
+
+Touch BRAIN
+CANをモニタする装置?
+
+http://download.vector-japan.co.jp/portal/medien/cmc/beginners/For_Beginners_CAN.pdf
+CANは、車載ネットワーク用に開発されたシリアルバスシステムであり、
+Robert Bosch社によって1986年に仕様が公開され、1994 年には国際規格
+(ISO 11898)となり、現在もっとも普及している車載ネットワークプロトコル
+といわれています。
+
+Ethernet-based system such as VEEDIMS
+http://www.veedims.com/
+
+http://www.aboutthatcar.com/ac-roadster-%E2%80%93-american-supercar/
+> However, in addition to the supercar status, the AC Roadster will
+> feature something that has the potential to benefit every car produced
+> in the future. It’s called the Virtual Electrical Electronic Device
+> Interface Management System or VEEDIMS.
+> 
+> ICONIC Motors said, “The VEEDIMS solution leverages the innovative
+> performance of Ethernet and IP technology to deliver an automation
+> system that allows application-specific solutions to be rapidly
+> designed and deployed. VEEDIMS allows vehicle engineers to replace
+> miles of analog wiring with a single-cable and on-board network that
+> carries both electric power and real-time data throughout the
+> vehicle.”
+
+http://www.iconicmotors.com/
+ICONIC Motors
+ICONIC AC Roadster
+
+http://next.rikunabi.com/tech/docs/ct_s03600.jsp?p=001148
+> 快適さ、便利さにおいて、ますます進化する自動車だが、今の自動車は実は
+> “走るコンピュータ”と化していることは一般の人にはあまり知られていない
+> かもしれない。自動車には大量の半導体やセンサーが組み込まれ、数十から
+> 100近い超小型コンピュータ（マイコン／ECU）が稼働しているのだ。４月にス
+> タートしたトヨタ自動車トヨタ東京開発センターBR制御ソフトウェア開発室
+> （BRW）主幹の保科健氏が言う。
+> 
+> 　ECUによるIT制御は、エンジン、ボデー、マルチメディア機器など多岐の領域
+> にわたる。燃料消費効率を高め、車体の横滑りを防ぎ、カーブではライトが角
+> 度を自動調整……。アクセルやブレーキ、トランスミッションやメーターでも
+> ECUは活躍する。車内の装置が正常に作動するかどうかをチェックするスタビリ
+> ティコントロールなど安全性能を確保するためにも使われる。しかも、ECUは単
+> 体で動いているのではない。それぞれは複合され、組み合わせながら動くのが
+> 今の車だというのだ。
+-->
 
 自動車も長い歴史があるが不便なことは沢山ある
-
-車にセンサがあるのはあたりまえ
 
 ガソリンが空かどうか
  多分、大昔の自動車にはセンサがついてなかったのだろう
@@ -46,7 +124,23 @@
 
 現在どこにいるか - 泥棒対策
 
+
+
+インターネット常時接続を売りにしている自動車というのは聞いたことがないのは不思議
+
+
+====
+
 一方、自転車も同じようなものである
+
+電動自転車のバッテリを使えばいいハズ
+
+USB端子がついた自転車の試作品を見て驚いたことがあるのですが、
+今考えてみると、
+USB端子を登載していないことの方が不思議に感じられます。
+時代を先取りしすぎていたのかもしれません。
+
+
 
 自転車
  サイクルコンピュータ
@@ -55,8 +149,15 @@
 * サーバにするかクライアントでいいか
   やっぱり固定URLがある方がいいけどクライアントでも大丈夫かも
 
-「モバイルクラウド」
-  意味わからんけど
+
+マシンのセンサの値を知りたい場合は
+マシンをサーバにしておく必要がありましたが、
+
+HTML5時代は必ずしもそういう構成にする必要がなくなった
+
+
+増井の自転車が bicycle.masui.org のようなアドレスになっていればいい
+
 
 Intelの[[UIPedia::Roy Want]]が昔[[http://gyazz.com/UIPedia/Roy+Want%3A+The+Personal+Server%3A+Changing+the+Way+We+Think+about+Ubiquitous+Computing Personal Server]]というのを提唱していた
 サーバを持ち歩くと面白いという話だと思うが、[[自転車]]ぐらいモビリティがあると面白いことができないか?
