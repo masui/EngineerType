@@ -12,19 +12,50 @@ http://d.hatena.ne.jp/yomoyomo/20150604/toyota
 
 <h1>世界の不便を退治しよう(3) - 乗り物を快適にする技術</h2>
 
-どんなに古い車でもスピードメータやガソリン残量計のようなセンサが登載されています。
-自動車のブレーキその他の制御に1980年代からワンチップマイコンが使われてきていますし、
-最近は沢山のCPUやセンサのモジュール(ECU: Electronic Control Unit)を接続する
-<a href="https://ja.wikipedia.org/wiki/Controller_Area_Network">CAN</a> (Controller Area Network)などの
-<a href="https://vector.com/vj_ecu_jp.html#can">車載LAN</a>が普及してきています。
-CANは1986年に仕様か公開され、1994年に国際規格(ISO 11898)となって現在もっとも普及している車載ネットワーク規格です。
+自動車には昔から沢山のセンサやコンピュータが使われてきています。
+
+どんなに古い車でもスピードメータやガソリン残量計のようなセンサが登載されていますし、
+ブレーキやエンジンなどを制御に1980年代からワンチップマイコンが使われてきました。
+
+<p>
+最近のベンツ車は
+「<a href="http://www.mercedes-benz.co.jp/content/japan/mpc/mpc_japan_website/ja/home_mpc/passengercars/home/new_cars/models/a-class/w176/fascination/safety.html">アテンションアシスト</a>」
+という機能を登載しており、
+多数のセンサで以下のような情報を取得して居眠り運転のような危険な状況を検出しています。
+
+<ul>
+<li> 走行状況の検出(加速度など)
+<li> 車線変更の検出
+<li> 路面状況の検出
+<li> ドライバー交代の検出
+<li> ドライビングスタイル(走行速度など)
+<li> ステアリング操作の検出
+<li> 各種操作の検出(アクセルペダル、ウインカーなど)
+<li> 走行条件の検出(時刻、運転時間など)
+</ul>
+
+またMINIはAR技術を使って
+<a href="https://www.youtube.com/watch?v=QARt89_6Jrs">MINI Augmented Vision</a>
+なんてのを提案しているし、
+
+高度な認識技術/AR技術
+
+
+最近の車は沢山のCPUやセンサのモジュール(ECU: Electronic Control Unit)を接続する
+<a href="https://ja.wikipedia.org/wiki/Controller_Area_Network">CAN</a> (Controller Area Network)のような
+<a href="https://vector.com/vj_ecu_jp.html#can">車載LAN</a>が使われています。
+
+CANは1986年に仕様が公開され、1994年に国際規格となって普及している車載ネットワーク規格です。
 一般的なコンピュータからCAN上を流れる情報にアクセスするための装置も販売されていますが、
-まだあまりポピュラーではないようです。
+信号の詳細は公開されておらず、一般ユーザが利用することはできません。
 
 2線ツイストペアを利用するCANは計算機で広く使われてきたEthernetとは似て非なるものですが、
 Ethernet準拠の
 <a href="http://www.veedims.com/">VEEDIMS</a>
 というネットワークが利用されている高級車もあるようです。
+
+
+
 
 <!--
 > http://monoist.atmarkit.co.jp/mn/articles/0805/09/news152_2.html
@@ -42,8 +73,8 @@ Touch BRAIN
 CANをモニタする装置?
 
 http://download.vector-japan.co.jp/portal/medien/cmc/beginners/For_Beginners_CAN.pdf
-CANは、車載ネットワーク用に開発されたシリアルバスシステムであり、
-Robert Bosch社によって1986年に仕様が公開され、1994 年には国際規格
+ANは車載ネットワーク用に開発されたシリアルバスシステムであり、
+Robert Bosch社によって1986年に仕様が公開されて国際規格
 (ISO 11898)となり、現在もっとも普及している車載ネットワークプロトコル
 といわれています。
 
@@ -85,23 +116,10 @@ http://next.rikunabi.com/tech/docs/ct_s03600.jsp?p=001148
 > 今の車だというのだ。
 -->
 
+CAN上のデータを自由に解析することができれば
+このような機能はユーザが実装することも可能かもしれませんが、
+
 <p>
-最近のベンツ車は
-「<a href="http://www.mercedes-benz.co.jp/content/japan/mpc/mpc_japan_website/ja/home_mpc/passengercars/home/new_cars/models/a-class/w176/fascination/safety.html">アテンションアシスト</a>」
-という機能を登載しており、
-センサを利用して以下のような情報を利用して居眠り運転のような危険な状況を検出しています。
-
-<ul>
-<li> 走行状況の検出(加速度など)
-<li> 車線変更の検出
-<li> 路面状況の検出
-<li> ドライバー交代の検出
-<li> ドライビングスタイル(走行速度など)
-<li> ステアリング操作の検出
-<li> 各種操作の検出(アクセルペダル、ウインカーなど)
-<li> 走行条件の検出(時刻、運転時間など)
-</ul>
-
 CANは自動車を安全に正しく動かすためのシステムであり、
 運転者や同乗者のコミュニケーションを支援するものではありません。
 
@@ -121,6 +139,10 @@ CAN上を流れる各種のデータを読み出す
 雨が降っている場所を知るといった
 <a href="http://internet.watch.impress.co.jp/www/article/2001/1205/ipv6smt.htm">実験</a>が行なわれたり、
 様々なビジネスチャンスが模索されていましたが、現在実用になっているものはほとんどありません。
+
+CANのデータは使えないとしても、
+安全性に影響の無いセンサやコミュニケーション手段が登載されていれば
+様々な応用が考えられます。
 
 <!---
 > http://internet.watch.impress.co.jp/www/article/2001/1205/ipv6smt.htm
@@ -160,8 +182,6 @@ Webサーバに接続可能なクライアントとして利用されていま�
 自動車や自転車のような移動するオブジェクト(?)は
 サーバ的な存在になったりクライアント的な存在になったりすることがあるので、
 柔軟な性質をもつことが必要だと思われます。
-
-
 
 
 
@@ -227,6 +247,12 @@ Intelの[[UIPedia::Roy Want]]が昔[[http://gyazz.com/UIPedia/Roy+Want%3A+The+Pe
 昔に比べればすごく良くなったが
   後が見えるとかね
 
+音声通知は欲しいことも
+  ナビ以外でも欲しい
+  ガソリンが少ないとか
+
+MINIは車体の向こう側の景色が見えるとかいう広告を出しているが
+
 小さな問題
   隣と通信できない
     どこがどう渋滞してるかわからない
@@ -245,6 +271,34 @@ Intelの[[UIPedia::Roy Want]]が昔[[http://gyazz.com/UIPedia/Roy+Want%3A+The+Pe
 
 <h2>自転車に欲しい機能</h2>
 
+普通の自転車にセンサはついていませんが、
+マニア向けに様々なサイクルコンピュータが販売されています。
+速度や距離を測定/記録する安価なものから、
+ペダル回転数(ケイデンス)や心拍数を測定できるもの、
+GPSを登載したものまで様々な種類のものがあります。
+タイヤの回転を検出するセンサを
+
+Giantの
+<a href="http://giant.co.jp/giant15/acc_datail.php?p_id=A0000296">CONTINUUM SYNC</a>
+
+<a href="http://k-tai.impress.co.jp/docs/column/keyword/20110322_434325.html">ANT+</a>
+
+ANT+は
+
+USBホスト機能のあるAndroid
+
+USBホストケーブル（OTGケーブル）
+
+BLEのも
+
+
+
+盗難やイタズラの心配があるので
+コンピュータや
+
+
+
+
 一方、自転車も同じようなものである
 
 電動自転車のバッテリを使えばいいハズ
@@ -254,11 +308,21 @@ USB端子がついた自転車の試作品を見て驚いたことがあるの�
 USB端子を登載していないことの方が不思議に感じられます。
 時代を先取りしすぎていたのかもしれません。
 
-
-
 自転車
  サイクルコンピュータ
  目立たない中継機になる
+
+
+自動車も自転車も様々なセンサが使えるようになっているのに、
+CANやANT+のような独自規格で動いていて、
+自由に接続して使えないのが困る。
+
+標準的な記憶装置やネット接続でいろいろできるようになれば
+IoT応用が広がるハズなのに
+
+
+ネットとの連携はイマイチ
+
 
 </div>
 </body>
