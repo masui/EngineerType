@@ -1,7 +1,5 @@
 <!--
     Hackey, ORB, pinwheel, ...
-
-    cdbiff, biff
 -->
 
 <html>
@@ -13,12 +11,13 @@
     <div style="width:500pt">
       <h1>世界の不便を退治しよう(6) - IoT時代の通知技法</h1>
 
-      メールやメッセージが届いたときなどに、
-      それを知らせる様々な通知システムが広く使われています。
-      Unixには「biff」というシステムがあり、
-      メールが届いたときターミナルに通知を表示することができるようになっていました。
-      biffシステムが導入されたのは
-      1980年に開発された「4.0 bsd」(バークレー版Unix)だということなので、
+      メールやメッセージが届いたとき、
+      それをユーザに知らせるための様々な通知システムが広く使われています。
+      
+      昔のUnixには「biff」というシステムがあり、
+      メールが届いたときにターミナルに通知を表示できるようになっていました。
+      biffシステムが導入されたのは「4.0 bsd」というバージョンのUnixだということですが、
+      これは1980年に開発されたものなので、
       通知システムの歴史はインターネットより長いといえるかもしれません。
 
       <!--
@@ -31,7 +30,9 @@
       SMTPは1982にRFC化
 	-->
 
-      1980年代に発売されたSun Workstationでは
+      <p/>
+      1980年代に発売されたSun Workstationは
+      当時としては先進的なGUIを登載していましたが、
       メールアプリケーションは
       以下のようなデスクトップアイコンで表現されており、
       メールが届いたときは右側の旗がたつようになっていました。
@@ -46,17 +47,21 @@
 	実は手紙を出したいときに旗をたてておくものだと後で知りました)
       </blockquote>
 
-      30年以上前から
+      このように、30年以上前から
       メール到来を通知するアイコンが使われていたことになりますが、
       アイコンなどの表示で通知を知らせる手法は現在でもスマホなどでもよく使われています。
 
-      誰かが来たときや電話がかかってきたときぐらいでしたから
-      通知がわずらわしくて困ることもありませんでしたが、
-
+      <p/>
       昔のメールはバケツリレーで送られていましたから
-      多くても一日数回届く程度で、通知がわずらわしく感じることはありませんでしたが、
+      届くのは多くても一日数回程度で、
+      通知がわずらわしいと感じることはありませんでした。
       
-      現在のパソコンやスマホでは
+      現実世界でも、
+      誰かが来たときや電話がかかってきたときぐらいでしたから
+      通知がわずらわしくて困ることもありませんでした。
+
+      <p/>
+      一方、現在のパソコンやスマホでは
       場所や所を気にすることなく
       様々な通知情報が音や表示されるため、
       大変わずらわし「通知地獄」におちいっているといえるかもしれません。
@@ -76,7 +81,7 @@
       テキスト入力しているとき関係ないダイアログが表示されて入力が中断されることがあるのも
       通知ではないが嫌なものである
 
-      機器が消滅しても通知が消滅しいないのであればイライラはあまりへらないかもしれません。
+      機器が消滅しても通知が消滅しないのであればイライラはあまりへらないかもしれません。
 
       <p/>
       
@@ -147,34 +152,68 @@
       ねおちしたらGyazoるとか
       アルコールが入ってると投稿できないとか
 
-      <h2>通知デバイスの研究</h2>
+      <!-- <h2>通知デバイスの研究</h2> -->
 
-      ネットワークに接続された様々なディスプレイやアクチュエータは
+      <h2>アンビエントな通知システム</h2>
+
+      ネットに接続された様々なディスプレイやアクチュエータは
       アンビエントな通知システムとして利用することができます。
 
-      MITメディアラボの石井ヒロシ氏は「Tangible Bits」という名前で
-      様々なシステムを提案していますが、
-      IoT的な通知システムも
+      <p/>
+      MITメディアラボの石井裕氏は19xx年ごろから
+      「Tangible Bits」という名前で
+      実世界と計算機世界を融合する様々なシステムを提案していますが、
+      IoT的な通知システムも様々なものを提案しています。
 
-      Water Lamp
-      Ambient fixture
-      http://alumni.media.mit.edu/~andyd/folio/af.html
-      http://alumni.media.mit.edu/~andyd/images/af_water_ceiling_big.gif
+      <p/>
+      2000年に製作された「Pinwheel」は、
+      ネットのケーブル上のトラフィックを「風車」でアンビエントに通知するシステムです。
+      沢山のデータがケーブル上を流れているとき風車が高速に回転するので、
+      ネットワークのデータを体で感じることができます。
       
-      Pinwheel 2000
-      https://twitter.com/ishii_mit/status/598015255055327232
-      https://pbs.twimg.com/media/CEyTtJhUIAADZH0.jpg
-      http://tangible.media.mit.edu/project/pinwheels/
+      <blockquote>
+	<img src="https://pbs.twimg.com/media/CEyTtJhUIAADZH0.jpg">
+      </blockquote>
+      <!--
+	  https://twitter.com/ishii_mit/status/598015255055327232
+	  http://tangible.media.mit.edu/project/pinwheels/
+	-->
       
-      Orb
-      Ambient Orb社
-      https://en.wikipedia.org/wiki/Ambient_Devices
-      The company was founded by David L. Rose, Ben Resner, Nabeel Hyatt and Pritesh Gandhi, and is a spin-off from the MIT Media Lab
-      http://cdn.shopify.com/s/files/1/0004/6411/products/greenorb_onwhite_medium.jpg
 
-      cdbiff
+      「Water Lamp」は
+      水面を経由してxxxの状況を天井に投射するランプです。
+      Ambient fixture(アンビエントな家具)
       
-      ゴミ箱
+      <blockquote>
+	<img src="http://alumni.media.mit.edu/~andyd/images/af_water_ceiling_big.gif">
+      </blockquote>
+      <!--
+	  Ambient fixture
+	  http://alumni.media.mit.edu/~andyd/folio/af.html
+	  http://alumni.media.mit.edu/~andyd/images/af_water_ceiling_big.gif
+	-->
+
+      「Orb」はMIT出身者が設立した
+      <a href="https://en.wikipedia.org/wiki/Ambient_Devices">Ambient Orb社</a>が開発した、
+      ランプのようなアンビエントな通知システムです。
+
+      <blockquote>
+	<img src="http://cdn.shopify.com/s/files/1/0004/6411/products/greenorb_onwhite_medium.jpg"><br/>
+	Orb
+      </blockquote>
+      <!--
+	  The company was founded by David L. Rose, Ben Resner, Nabeel Hyatt and Pritesh Gandhi, and is a spin-off from the MIT Media Lab
+	-->
+
+      auは
+      <a href="http://internet.watch.impress.co.jp/docs/news/20150825_717850.html">Umbrella Stand</a>
+      という製品を
+
+      <blockquote>
+	<img src="https://gyazo.com/608f319ce13c048a77bf3c5f8ff374c6.png"><br/>
+	auのUmbrella Stand
+      </blockquote>
+      
 
       くすぃーほーむ ...
       天気がわかる
@@ -182,8 +221,6 @@
 
       ネット接続できる電球を使うと
       Orbのようなものを簡単に自作できるようになってきました。
-
-      LittleBits
 
       hueを使う
       今日の天気をHueで表示する
@@ -193,6 +230,16 @@
 
       ひと昔前は、ネット情報から実世界装置をコントロールすることは大変でしたが
       最近はいかにも簡単にやることができます。
+      
+      LittleBits
+
+      <h3>手軽なアクチュエータを活用した通知システム</h3>
+
+      cdbiff
+
+      ゴミ箱
+
+      江ノ島の風
 
       <h2>通知システムの将来</h2>
 
@@ -218,7 +265,46 @@
       をセンスすることは相当難しいでしょう。
 
       マイ通知システムをカスタマイズするといいのかも
+
+
+      <p/>
+      いつでもどこでも誰でもコンピュータを活用できる
+      「ユビキタスコンピューティング」の世界が実現しつつありますが、
+      スマホにどっぷり漬かって通知に右往左往する人達が増殖している現在は
+      理想と程遠い状況のように感じられます。
+      ユビキタスコンピューティングという言葉を提唱した
+      Mark Wriser氏は早くからこのような危険に気付いており、
+      「<a href="https://en.wikipedia.org/wiki/Calm_technology">カーム(Calm)テクノロジー</a>」
+      という概念を1995年に提唱していました。
+      カームテクノロジーの世界ではコンピュータは自分をあまり主張せず、
+      さりげなく人間を助けてくれるような存在になります。
+      このような目標が実現された社会を
+      「アンビエント情報社会」と名付けて研究を行なっている人達もいるようです。
+
+      ユーザが能動的にコンピュータを利用する機会を減らしても
+      満足して生きることができるようにするために、
+      IoT技術者を駆使して
+      通知地獄を解消するところから始めていきたいものだと思います。
       
+      <!--
+	  (落合) http://engineer.typemag.jp/article/tehuxochiai
+	  例えばPCやスマホという実体があることで、実は我々の集中力や人間ら
+	  しさってけっこう奪われていませんか。人間は人間らしく生きたいだけ
+	  なのに、あらゆる場所でコンピュータを操作しなくてはならない。
+	  その問題を解決するための技術の総称として、後にワイザーはカームテ
+	  クノロジー（穏やかな技術）という言葉を定義しているんです。
+	  でも、現在のように具体的にカームテクノロジーの問題が表面化する前
+	  に、ワイザーは亡くなってしまった。僕らはそれを引き継いでいかない
+	  といけない。
+	  
+	  (水口) http://www.kyoto-su.ac.jp/project/st/st08_05.html
+	  ユビキタス社会という言葉は、いつでもどこでもコンピュータに囲まれ
+	  た社会を意味するものとしてよく紹介されますが、実はこれは提唱者の
+	  マーク・ワイザーがいった意味とは少し異なります。彼が思い描いたの
+	  は“Calm Technology”に囲まれた世界。すなわち、普段は何気ない存
+	  在になっていて、必要な時にはそっと支えてくれるようなコンピュータ
+	  に囲まれた世界のことを意味していたようです。
+	-->
       
     </div>
   </body>
