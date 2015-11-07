@@ -170,41 +170,28 @@
 
       <h2>通知デバイスの工夫</h2>
 
-      <h2>アンビエントな通知システム</h2>
-      
-      なんとなく明るくなる、といった何気ない通知をすることができる
-      
+      大きな音や光による通知は邪魔ですが、
+      もっと穏健な通知方式を利用すれば
+      通知イライラ問題は解決するかもしれません。
 
-      ネットに接続された様々なディスプレイやアクチュエータは
-      アンビエントな通知システムとして利用することができます。
+      ネットに接続されたディスプレイやアクチュエータを
+      アンビエントな通知システムとして利用する様々な試みが行なわれています。
 
-      <p/>
+      <h3>光によるアンビエントな通知システム</h3>
+      
       MITメディアラボの石井裕氏は1995年ごろから
-      「Tangible Bits」という名前で
-      実世界と計算機世界を融合する様々なシステムを提案していますが、
-      IoT的な通知システムも様々なものを提案しています。
+      「<a href="http://tangible.media.mit.edu/">Tangible Bits</a>」という名前で
+      実世界と計算機世界を融合する様々なシステムを提案しており、
+      様々な通知システムも提案しています。
 
       <p/>
-      2000年に製作された「Pinwheel」は、
-      ネットのケーブル上のトラフィックを「風車」でアンビエントに通知するシステムです。
-      沢山のデータがケーブル上を流れているとき風車が高速に回転するので、
-      ネットワークのデータを体で感じることができます。
-      
-      <blockquote>
-	<img src="https://pbs.twimg.com/media/CEyTtJhUIAADZH0.jpg">
-      </blockquote>
-      <!--
-	  https://twitter.com/ishii_mit/status/598015255055327232
-	  http://tangible.media.mit.edu/project/pinwheels/
-	-->
-      
-
       「Water Lamp」は
-      水面を経由してxxxの状況を天井に投射するランプです。
-      Ambient fixture(アンビエントな家具)
+      <a href="http://alumni.media.mit.edu/~andyd/folio/af.html">Ambient fixture</a>
+      (アンビエントな家具)シリーズの作品ひとつで、
+      水面を経由して情報を天井に投射することができます。
       
       <blockquote>
-	<img src="http://alumni.media.mit.edu/~andyd/images/af_water_ceiling_big.gif">
+	<img src="http://alumni.media.mit.edu/~andyd/images/af_water_ceiling_big.gif" width=200>
       </blockquote>
       <!--
 	  Ambient fixture
@@ -215,76 +202,117 @@
       「Orb」はMIT出身者が設立した
       <a href="https://en.wikipedia.org/wiki/Ambient_Devices">Ambient Orb社</a>が開発した、
       ランプのようなアンビエントな通知システムです。
+      株価や天気などの情報をアンビエントに通知することができます。
 
       <blockquote>
-	<img src="http://cdn.shopify.com/s/files/1/0004/6411/products/greenorb_onwhite_medium.jpg"><br/>
+	<img src="http://cdn.shopify.com/s/files/1/0004/6411/products/greenorb_onwhite_medium.jpg" width=300><br/>
 	Orb
       </blockquote>
       <!--
 	  The company was founded by David L. Rose, Ben Resner, Nabeel Hyatt and Pritesh Gandhi, and is a spin-off from the MIT Media Lab
 	-->
 
-      auは
+      Orbは製品としてはあまり成功しなかったようですが、
+      アンビエントな光を出す家具というアイデアは好まれているようで、
+      auは8月に
       <a href="http://internet.watch.impress.co.jp/docs/news/20150825_717850.html">Umbrella Stand</a>
-      という製品を
+      という製品を発表しました。
+      本体底のLEDが光ることによって、
+      傘が必要かどうかがわかるようになっています。
 
       <blockquote>
 	<img src="https://gyazo.com/608f319ce13c048a77bf3c5f8ff374c6.png"><br/>
 	auのUmbrella Stand
       </blockquote>
-      
 
+      Phillipsの<a href="http://www2.meethue.com/">Hue</a>のような、
+      ネットワークから制御が可能な電灯製品が増えてきました。
+      Hueのような製品を使うと、
+      OrbやUmbrella Standのような
+      アンビエントな照明を比較的簡単に自作できます。
+
+      たとえば
+      <a href="http://shokai.org/blog/archives/8377">橋本翔氏が公開しているソフトウェア</a>を利用すると、
+      20行程度のRubyプログラムを使って
+      今日の天気をHueで表示するシステムを作ることができます。
+
+      <blockquote>
+	<img src="https://gyazo.com/ee16e176bf8053817a8ea4faca82428f.png" width=400><br/>
+	PhillipsのHue
+      </blockquote>
+
+      <!---
       くすぃーほーむ ...
       天気がわかる
       http://kakehashi.tv/pickup.php?blogid=4&i=305
 
-      ネット接続できる電球を使うと
-      Orbのようなものを簡単に自作できるようになってきました。
-
-      hueを使う
-      今日の天気をHueで表示する
-      http://shokai.org/blog/archives/8377
-      
       Hackey
 
       ひと昔前は、ネット情報から実世界装置をコントロールすることは大変でしたが
       最近はいかにも簡単にやることができます。
       
       LittleBits
+	-->
 
-      <h3>手軽なアクチュエータを活用した通知システム</h3>
+      <h3>アクチュエータを活用したアンビエントな通知システム</h3>
 
-      cdbiff
+      モータのようなアクチュエータを利用すると
+      さらに面白いアンビエントな通知システムを作ることができます。
+      
+      <p/>
+      MITメディアラボの石井裕氏のグループによって
+      2000年に製作された「<a href="http://tangible.media.mit.edu/project/pinwheels/">Pinwheel</a>」は、
+      ネットのケーブル上のトラフィックを「風車」でアンビエントに通知するシステムです。
+      ケーブル上を流れるデータの量に応じて風車が回転するので、
+      ネットワークのデータを体で感じることができます。
+      
+      <blockquote>
+	<img src="https://pbs.twimg.com/media/CEyTtJhUIAADZH0.jpg" width=500>
+      </blockquote>
+      <!--
+	  https://twitter.com/ishii_mit/status/598015255055327232
+	  http://tangible.media.mit.edu/project/pinwheels/
+	-->
+      <!--
+	  cdbiff
+	-->
 
-      ゴミ箱
+      下の写真は、
+      私の研究室にいた小浦侑己氏と山田尚昭氏が作成した
+      「江ノ島の風」通知システムです。
+      プロペラの向きと回転数を
+      サーボモータと直流モータで制御することにより、
+      江ノ島の現在の風速と風向きが常に表示されるようになっています。
+      ヨットやウィンドサーフィンのようなスポーツが好きな人は、
+      部屋に置いたこれを眺めてソワソワすることができます。
 
-      江ノ島の風
+      <blockquote>
+	<img src="https://gyazo.com/78c8adaf1cbd4e4a6df85616c0ee9a10.png" width=400><br/>
+	江ノ島の風通知システム
+      </blockquote>
 
       <h2>通知システムの将来</h2>
 
       世の中の通知がまだまだ増えるのは間違いありませんし、
       通知を扱うための使いやすいIoTデバイスやセンサも増えるのは間違いありませんから、
-      今後もいろいろな通知ハンドリングシステムが出てくることは間違いありません。
+      今後もいろいろな通知システムが登場してくるでしょう。
 
-      しかしユーザの状況をセンスするだけでは完全な通知ハンドリングシステムを作ることは難しいでしょう。
-      
-      会議中はメールが届いた通知は来てほしくないのが普通ですが、
-      会議で議論してるシステムの進捗に関するメールは届いて欲しいかもしれないので
-      通知の中身まで考慮したフィルタリングが必要かもしれない
+      しかしユーザの状況を計測して完全な通知ハンドリングシステムを作ることは
+      かなり難しいでしょう。
+      どんなセンサを使ったとしても人間の状況を確実に知ることは困難です。
+      ボーっとしてるのか / 関係ないことを考えているのか / ものすごいアイデアが出てるところなののかを
+      センスすることは相当難しいでしょう。
 
-      そういった予測はかなり難しい
+      また、通知の内容によって動作が変わることが好ましい場合もあります。
+      たとえば会議中はメールの通知は届いてほしくないのが普通ですが、
+      会議で議論されているシステムの進捗メールは届いて欲しいかもしれないので、
+      通知の中身まで考慮したフィルタリングが必要かもしれません。
+      しかしメールの内容をもとにspamを根絶することが難しいのと同様に、
+      通知内容をもとに通知を制御することはかなり難しいでしょう。
 
-      内容をもとにspamを根絶することが難しいのと同様に、
-      通知内容をもとにタイミングなどを知ることはかなり難しいでしょう。
-
-      一般に予測がはずれると腹がたつものなので
-
-      また、どんなセンサを使ったとしても人間の状況を確実に知ることは困難です。
-      ボーっとしてるのか / 関係ないことを考えているのか / ものすごいアイデアが出てるのか
-      をセンスすることは相当難しいでしょう。
-
-      マイ通知システムをカスタマイズするといいのかも
-
+      完全な通知システムを作ることは難しいかもしれませんが、
+      現在より適切な通知システムを作ることは可能でしょうから、
+      様々な試みの研究が進んでほしいものだと思います。
 
       <p/>
       いつでもどこでも誰でもコンピュータを活用できる
